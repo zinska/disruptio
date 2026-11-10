@@ -6,16 +6,20 @@
     <title>Disruptio — Build in St. Louis</title>
 
     <!-- Link previews (iMessage, GroupMe, Slack, LinkedIn, X) -->
-    <!-- TODO: create public/og.png at 1200×630 and public/favicon.png -->
     <meta name="description" content="Disruptio is a student-run hacker house in St. Louis: a space, a community, and mentors for people building startups. Join the founding cohort." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://disruptio.co" />
     <meta property="og:title" content="Disruptio — Build in St. Louis" />
     <meta property="og:description" content="A student-run hacker house for builders in St. Louis. Join the founding cohort." />
     <meta property="og:image" content="https://disruptio.co/public/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Disruptio: a student-run hacker house in St. Louis" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="theme-color" content="#fafafa" />
-    <link rel="icon" href="/public/favicon.png" />
+    <link rel="icon" href="/public/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/public/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
 
     <style>
       :root {
@@ -90,6 +94,13 @@
         margin-bottom: 60px;
         padding-bottom: 50px;
         border-bottom: 3px solid var(--text);
+      }
+      .logo-mark {
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 16px;
+        color: var(--text);
       }
       h1 {
         font-size: 3.5rem;
@@ -361,6 +372,8 @@
     <div class="container">
       <!-- HERO: who it's for + the ask, above the fold -->
       <header>
+        <!-- Arch mark: same path as public/logo-mark-*.svg; currentColor follows light/dark mode -->
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M7 56 C10 20 24 8 32 8 C40 8 54 20 57 56 L48 56 C45.5 27 37.5 13 32 13 C26.5 13 18.5 27 16 56 Z" fill="currentColor"/></svg>
         <h1>Disruptio</h1>
         <p class="subtitle">A student-run hacker house for people building startups in St. Louis. Space to work, mentors who've done it, and a community that makes building fun.</p>
         <div class="hero-actions">
