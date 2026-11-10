@@ -79,7 +79,7 @@
       }
 
       a { color: inherit; }
-      a:focus-visible, .cta-button:focus-visible {
+      a:focus-visible, .cta-button:focus-visible, summary:focus-visible {
         outline: 3px solid var(--text);
         outline-offset: 4px;
       }
@@ -216,6 +216,74 @@
         right: 20px;
         font-size: 1.5rem;
       }
+
+      /* How it works: logistics grid */
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+      }
+      .detail {
+        background: var(--card);
+        border: 2px solid var(--text);
+        padding: 25px;
+      }
+      .detail h4 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .detail p { font-size: 1.05rem; line-height: 1.7; margin-bottom: 0; }
+      .tbd {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border: 2px solid var(--text);
+        padding: 0 8px;
+        margin-bottom: 8px;
+      }
+
+      /* FAQ */
+      .faq details {
+        background: var(--card);
+        border: 2px solid var(--text);
+        margin-bottom: 15px;
+      }
+      .faq summary {
+        cursor: pointer;
+        font-size: 1.15rem;
+        font-weight: 600;
+        padding: 18px 25px;
+        list-style: none;
+        position: relative;
+        padding-right: 50px;
+      }
+      .faq summary::-webkit-details-marker { display: none; }
+      .faq summary::after {
+        content: '+';
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.4rem;
+      }
+      .faq details[open] summary::after { content: '–'; }
+      .faq details[open] summary { border-bottom: 2px solid var(--border); }
+      .faq details p { padding: 18px 25px 0; font-size: 1.1rem; }
+
+      /* What happens next (inside closing CTA) */
+      .next-steps {
+        text-align: left;
+        max-width: 480px;
+        margin: 10px auto 25px;
+        padding-left: 25px;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      .next-steps li { margin-bottom: 6px; }
 
       /* Quote */
       .quote {
@@ -368,6 +436,43 @@
         </div>
       </section>
 
+      <!-- HOW IT WORKS: update each card as details are confirmed; keep "Still being finalized" until they are -->
+      <section>
+        <h2>How it works</h2>
+        <p>We're early, and some details aren't settled yet. Here's where things stand.</p>
+        <div class="details-grid">
+          <div class="detail">
+            <h4>When</h4>
+            <p>The founding cohort is planned for Fall 2027. The exact opening date is still being finalized.</p>
+          </div>
+          <div class="detail">
+            <h4>Where</h4>
+            <span class="tbd">Still being finalized</span>
+            <p>We're securing a space in St. Louis now. Once it's confirmed, we'll share the location and how to get there, including without a car.</p>
+          </div>
+          <div class="detail">
+            <h4>Format</h4>
+            <span class="tbd">Still being finalized</span>
+            <p>Whether that's live-in, drop-in coworking, or a mix, building alongside other people is the core of it, and events are part of it either way.</p>
+          </div>
+          <div class="detail">
+            <h4>Cost</h4>
+            <span class="tbd">Still being finalized</span>
+            <p>We'll share costs before anyone is asked to commit to anything.</p>
+          </div>
+          <div class="detail">
+            <h4>Getting in</h4>
+            <span class="tbd">Still being finalized</span>
+            <p>Signing up is the first step. It puts you on the list for the founding cohort. We'll share how members are selected once that's set.</p>
+          </div>
+          <div class="detail">
+            <h4>Commitment</h4>
+            <span class="tbd">Still being finalized</span>
+            <p>Signing up doesn't commit you to anything. We'll be clear about what membership expects before you join.</p>
+          </div>
+        </div>
+      </section>
+
       <section>
         <h2>Why St. Louis needs this</h2>
         <p>In 1904, St. Louis was booming. The World's Fair brought global attention. Washington University built Francis Field and the Brookings Quadrangle to host the Olympics. The city was at the center of the old economy, thriving with industry, culture, and ambition.</p>
@@ -395,11 +500,40 @@
         </div>
       </section>
 
+      <section class="faq">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Do I need an idea?</summary>
+          <p>No. Plenty of people find their idea, or their co-founders, by being around other builders. Come curious.</p>
+        </details>
+        <details>
+          <summary>Do I need to know how to code?</summary>
+          <p>No. Startups need designers, researchers, people who can sell, and people who can figure things out. If you want to learn to build, you'll be surrounded by people who can help.</p>
+        </details>
+        <details>
+          <summary>Are first-years welcome?</summary>
+          <p>Yes. First-years are welcome, and starting early is a big advantage. You don't need experience to join.</p>
+        </details>
+        <details>
+          <summary>Is this affiliated with WashU?</summary>
+          <p>Disruptio was started by and is run by WashU students. It isn't an official university program. Any formal relationship with WashU is still being finalized.</p>
+        </details>
+        <details>
+          <summary>Can non-WashU students join?</summary>
+          <p>Yes. Disruptio is open to builders across St. Louis, including students at other schools.</p>
+        </details>
+      </section>
+
       <!-- CLOSING CTA -->
       <section class="cta" id="join">
         <h2>Join the Fall 2027 cohort</h2>
-        <p>We're building the first group of members now. Tell us what you're working on, or what you want to work on, and we'll keep you posted on the space, events, and how to get involved.</p>
-        <!-- TODO: replace href with your interest form URL (e.g. Google Form / Tally) -->
+        <p>We're building the first group of members now. Tell us what you're working on, or what you want to work on.</p>
+        <!-- WHAT HAPPENS NEXT: keep in sync with what you actually send sign-ups -->
+        <ol class="next-steps">
+          <li>Fill out the short sign-up form.</li>
+          <li>You'll get occasional updates on the space, events, and the founding cohort. No spam.</li>
+          <li>When the space opens, you'll be among the first to hear about it.</li>
+        </ol>
         <a class="cta-button" href="https://forms.gle/kF9RMzgU3Xef2vdD9" target="_blank" rel="noopener">Sign up</a>
         <p class="share-line">Know someone who should be here? Send them disruptio.co.</p>
       </section>
