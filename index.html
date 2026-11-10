@@ -61,19 +61,6 @@
         overflow-x: hidden;
       }
 
-      /* Notebook aesthetic */
-      .notebook-lines {
-        position: fixed;
-        inset: 0;
-        background-image: repeating-linear-gradient(
-          transparent, transparent 31px,
-          var(--border) 31px, var(--border) 32px
-        );
-        opacity: 0.3;
-        pointer-events: none;
-        z-index: 0;
-      }
-
       .container {
         max-width: 900px;
         margin: 0 auto;
@@ -367,8 +354,6 @@
     </style>
   </head>
   <body>
-    <div class="notebook-lines" aria-hidden="true"></div>
-
     <div class="container">
       <!-- HERO: who it's for + the ask, above the fold -->
       <header>
