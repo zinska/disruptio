@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disruptio — Full Thesis</title>
+
+    <!-- Link previews (iMessage, GroupMe, Slack, LinkedIn, X) -->
+    <meta name="description" content="Why St. Louis loses its builders, how innovation hubs actually form, and how Disruptio starts the flywheel: the full thesis for investors, sponsors, and partners." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://disruptio.co/thesis.html" />
+    <meta property="og:title" content="Disruptio — Full Thesis" />
+    <meta property="og:description" content="Building the innovation ecosystem that keeps talent in St. Louis." />
+    <meta property="og:image" content="https://disruptio.co/public/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Disruptio: a student-run hacker house in St. Louis" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#fafafa" />
+    <link rel="icon" href="/public/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/public/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
+
+    <style>
+      :root {
+        --bg: #fafafa;
+        --card: #ffffff;
+        --text: #1a1a1a;
+        --on-text: #ffffff;
+        --border: #d4d4d4;
+        --subtle: #5c5c5c;
+        --highlight: #ffeb3b;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #161616;
+          --card: #1f1f1f;
+          --text: #f2f2f2;
+          --on-text: #161616;
+          --border: #3a3a3a;
+          --subtle: #b0b0b0;
+          --highlight: rgba(255, 214, 0, 0.35);
+          color-scheme: dark;
+        }
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition: none !important; }
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background: var(--bg);
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 30px;
+        position: relative;
+        z-index: 1;
+      }
+
+      a { color: inherit; }
+      a:focus-visible, .cta-button:focus-visible {
+        outline: 3px solid var(--text);
+        outline-offset: 4px;
+      }
+
+      /* Top nav back to the member page */
+      .back-link {
+        display: inline-block;
+        margin-bottom: 30px;
+        font-size: 1rem;
+        color: var(--subtle);
+      }
+
+      /* Header / hero */
+      header {
+        text-align: center;
+        margin-bottom: 60px;
+        padding-bottom: 50px;
+        border-bottom: 3px solid var(--text);
+      }
+      .logo-mark {
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 16px;
+        color: var(--text);
+      }
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        margin-bottom: 20px;
+      }
+      .subtitle {
+        font-size: 1.3rem;
+        color: var(--subtle);
+        max-width: 640px;
+        margin: 0 auto;
+      }
+      .hero-actions { margin-top: 35px; }
+      .hero-note {
+        margin-top: 18px;
+        font-size: 1rem;
+        color: var(--subtle);
+      }
+
+      /* Buttons */
+      .cta-button {
+        display: inline-block;
+        background: var(--text);
+        color: var(--on-text);
+        padding: 18px 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        border: 3px solid var(--text);
+        box-shadow: 5px 5px 0 var(--text);
+        transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+      }
+      .cta-button:hover {
+        background: var(--card);
+        color: var(--text);
+        transform: translate(3px, 3px);
+        box-shadow: 2px 2px 0 var(--text);
+      }
+
+      /* Sections */
+      section { margin-bottom: 80px; }
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 30px;
+        padding-bottom: 8px;
+        border-bottom: 3px solid var(--text);
+        display: inline-block;
+      }
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: 40px 0 20px;
+      }
+      p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+      .highlight {
+        background: linear-gradient(180deg, transparent 60%, var(--highlight) 60%);
+        padding: 2px 0;
+        font-weight: 600;
+      }
+
+      /* Lists */
+      .offer-list {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        margin: 0 0 20px 30px;
+      }
+      .offer-list li { margin-bottom: 8px; }
+
+      /* Two-column cards (audience + theses) */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin: 40px 0;
+      }
+      .card {
+        background: var(--card);
+        border: 2px solid var(--text);
+        padding: 35px;
+        position: relative;
+      }
+      .card h4 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding-right: 30px;
+      }
+      .card p:last-child { margin-bottom: 0; }
+      .card.thesis::before {
+        content: '✦';
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+      }
+
+      /* Quote */
+      .quote {
+        border-left: 4px solid var(--text);
+        padding-left: 30px;
+        margin: 40px 0;
+        font-style: italic;
+        font-size: 1.25rem;
+        color: var(--subtle);
+      }
+
+      /* Flywheel figure */
+      .figure {
+        margin: 40px auto;
+        text-align: center;
+      }
+      .figure img {
+        width: 60%;
+        max-width: 480px;
+        height: auto;
+        background: #ffffff; /* keeps the figure legible in dark mode */
+        padding: 16px;
+        border: 2px solid var(--text);
+      }
+
+      /* Timeline */
+      .timeline {
+        position: relative;
+        padding-left: 40px;
+        margin: 50px 0;
+      }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 3px;
+        background: var(--text);
+      }
+      .timeline-item { position: relative; margin-bottom: 40px; }
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -47px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--text);
+        border: 3px solid var(--bg);
+      }
+      .timeline-year {
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+      }
+
+      /* Closing CTA */
+      .cta {
+        background: var(--card);
+        border: 3px solid var(--text);
+        padding: 60px;
+        text-align: center;
+        margin: 80px 0;
+        box-shadow: 8px 8px 0 var(--text);
+        scroll-margin-top: 30px;
+      }
+      .cta h2 { border-bottom: none; padding-bottom: 0; margin-bottom: 20px; }
+      .cta p { max-width: 560px; margin-left: auto; margin-right: auto; }
+      .cta .cta-button { margin-top: 15px; }
+      .share-line {
+        margin-top: 35px;
+        margin-bottom: 0;
+        font-size: 1rem;
+        color: var(--subtle);
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 0;
+        border-top: 2px solid var(--border);
+        color: var(--subtle);
+      }
+      footer p { font-size: 1rem; margin-bottom: 6px; }
+
+      @media (max-width: 768px) {
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.8rem; }
+        .container { padding: 40px 20px; }
+        .cta { padding: 40px 25px; }
+        .cta-button { padding: 16px 32px; }
+        .figure img { width: 90%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a class="back-link" href="/">← disruptio.co</a>
+
+      <header>
+        <!-- Arch mark: same path as public/logo-mark-*.svg; currentColor follows light/dark mode -->
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M7 56 C10 20 24 8 32 8 C40 8 54 20 57 56 L48 56 C45.5 27 37.5 13 32 13 C26.5 13 18.5 27 16 56 Z" fill="currentColor"/></svg>
+        <h1>Disruptio</h1>
+        <p class="subtitle">Building the innovation ecosystem that keeps talent in St. Louis</p>
+      </header>
+
+      <div class="figure">
+        <img src="public/fig1.png" alt="Sketch of St. Louis's Gateway Arch between San Francisco's Golden Gate Bridge and the New York skyline, linked by arrows in a loop" />
+      </div>
+
+      <section>
+        <h2>The problem</h2>
+        <p>In 1904, St. Louis was booming. The World's Fair brought global attention. Washington University built Francis Field and the Brookings Quadrangle to host the Olympics. The city was at the center of the old economy, thriving with industry, culture, and ambition.</p>
+        <p>This is a stark contrast to today. While Washington University has grown from a regional "streetcar college" into a world-leading research institution, the city itself hasn't shared in that success. There's no startup culture, no innovation ecosystem, and no gravitational pull keeping talent here.</p>
+        <div class="quote">
+          "How do I get out of St. Louis and into San Francisco, New York, or Boston?"
+          <br />
+          — Every ambitious WashU senior
+        </div>
+        <p>The brain drain is real. Sam Altman and Jack Dorsey both grew up in St. Louis and built their companies elsewhere. The exceptions prove the point: Square co-founder Jim McKelvey stayed and built LaunchCode here, showing what's possible when builders invest in the city. <span class="highlight">WashU continues to rise while St. Louis declines.</span></p>
+      </section>
+
+      <section>
+        <h2>The pattern: research → ventures → risk capital → economic development</h2>
+        <p>Economic development in the new economy doesn't happen by accident. It follows a pattern that repeats across thriving innovation hubs. The clearest example is Stanford and Silicon Valley:</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1937: Frederick Terman leads Stanford electrical engineering</div>
+            <p>Professor Frederick Terman encouraged Stanford students to stay local and start companies. He helped them secure funding and space. His vision was simple: keep talent in the region, build companies, and create an ecosystem.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1939: Hewlett-Packard founded</div>
+            <p>Bill Hewlett and Dave Packard, Terman's students, founded HP in a Palo Alto garage with $538. Terman helped them secure their first contracts. HP became the foundation of Silicon Valley, proving that Stanford talent could build world-class companies locally.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1950s–1960s: The cascade begins</div>
+            <p>HP's success attracted talent and capital. Fairchild Semiconductor was founded in 1957 by eight engineers who left Shockley Semiconductor Laboratory. Fairchild became the "mother company" of Silicon Valley, spinning out Intel (1968), AMD (1969), and dozens of other semiconductor firms. Each generation created the next.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1970s–1980s: Venture capital emerges</div>
+            <p>Successful founders became investors. Former Fairchild and Intel executive Mike Markkula backed Apple (1976), and Kleiner Perkins, co-founded by Fairchild co-founder Eugene Kleiner, funded Sun Microsystems (1982). Risk capital concentrated in the region. The flywheel accelerated: ventures created capital, capital funded more ventures, and density attracted talent.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1990s–2000s: Urbanization and scale</div>
+            <p>Silicon Valley became synonymous with innovation. Google (1998), PayPal (1998), Facebook (2004), and thousands of startups followed. The ecosystem became self-sustaining. Stanford research fed ventures, ventures scaled, successful exits created more capital, and capital funded the next generation. San Francisco transformed from a regional city into a global innovation capital.</p>
+          </div>
+        </div>
+        <p><strong>It's recursive:</strong> research institutions create ventures → ventures scale → some create risk capital → risk capital funds and attracts talent for more ventures → density attracts more talent → talent creates more ventures. This is how cities thrive in the new economy.</p>
+      </section>
+
+      <section>
+        <h2>The solution: a bridge to build an ecosystem</h2>
+        <p>We can't replicate Silicon Valley overnight, but we can start the flywheel. <span class="highlight">The ecosystem starts as a bridge between St. Louis and coastal risk capital.</span> Eventually, ventures starting and scaling here will create risk capital and innovation density in St. Louis itself.</p>
+        <h3>Our two core theses</h3>
+        <div class="card-grid">
+          <div class="card thesis">
+            <h4>1. Fun is crucial</h4>
+            <p>In San Francisco, New York, and Boston, building startups is fun, social, and cool. At WashU, it's often academic. That's not conducive to building big things. We need a space where creativity meets community, where building is joyful, not just rigorous.</p>
+          </div>
+          <div class="card thesis">
+            <h4>2. In St. Louis, for St. Louis</h4>
+            <p>In SF and NYC, students learn and build in the same place, and they stay because the ecosystem supports scale. In St. Louis, as soon as anyone gets traction, there's a burning question: "How do I get to the coast?" We need an innovation ecosystem that encourages people to stay here, with lower costs, strong universities, and growing density.</p>
+          </div>
+        </div>
+        <p>As ventures start here, some will scale. Some of those will create risk capital in St. Louis. That capital will fund the next generation of ventures. This is the recursive engine of economic development in the new economy.</p>
+      </section>
+
+      <section>
+        <h2>Reviving the Spirit of St. Louis</h2>
+        <p>In 1927, St. Louis business leaders pooled resources to back Charles Lindbergh's attempt at the Orteig Prize, a $25,000 reward for the first nonstop flight between New York and Paris. Lindbergh made the flight in about 33 and a half hours in the <em>Spirit of St. Louis</em>, and the prize sparked $16 of investment for every dollar offered. In the years that followed, airline passengers increased 30-fold and pilot license applications grew 300%.</p>
+        <p><span class="highlight">St. Louis became synonymous with daring innovation.</span> That moment proves what's possible when the city rallies behind bold ambition. Today, we face a different challenge: not transatlantic flight, but economic transformation. We need to recreate that spirit with startups, AI, biotech, and the future of technology. We need St. Louis to win the modern Orteig Prize: building an innovation ecosystem that rivals the coasts.</p>
+      </section>
+
+      <section>
+        <h2>What we're building</h2>
+        <p>A physical and cultural space in the heart of St. Louis where builders come together. This is a student-run initiative that empowers WashU talent and the broader St. Louis community to build ventures locally:</p>
+        <ul class="offer-list">
+          <li>Mentorship from founders who have built and scaled companies</li>
+          <li>Resources and support to go from idea to traction</li>
+          <li>Social events and community that make building fun</li>
+          <li>Space for organic collaboration: nothing prescriptive, just serendipity</li>
+          <li>A bridge to coastal capital, connecting St. Louis ventures with investors in SF, New York, and Boston</li>
+        </ul>
+      </section>
+
+      <!-- CLOSING CTA: for investors, sponsors, and mentors -->
+      <section class="cta" id="contact">
+        <h2>Build this with us</h2>
+        <p>We're looking for investors, sponsors, and founders who want to help start the flywheel in St. Louis. If that's you, we'd love to talk.</p>
+        <a class="cta-button" href="mailto:hello@disruptio.co">Get in touch</a>
+        <p class="share-line">Want to join as a builder? <a href="/">See the member page</a>.</p>
+      </section>
+
+      <footer>
+        <p>Disruptio · St. Louis, MO</p>
+        <!-- TODO: add contact email and socials -->
+        <p><a href="mailto:hello@disruptio.co">hello@disruptio.co</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
