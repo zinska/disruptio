@@ -6,11 +6,11 @@
     <title>Disruptio — Build in St. Louis</title>
 
     <!-- Link previews (iMessage, GroupMe, Slack, LinkedIn, X) -->
-    <meta name="description" content="Disruptio is a student-run hacker house in St. Louis: a space, a community, and mentors for people building startups. Join the founding cohort." />
+    <meta name="description" content="Disruptio is a student-run hacker house at WashU for people building startups, proposed as a Living Learning Community for Fall 2027. Hackathons and events are open to builders across St. Louis." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://disruptio.co" />
     <meta property="og:title" content="Disruptio — Build in St. Louis" />
-    <meta property="og:description" content="A student-run hacker house for builders in St. Louis. Join the founding cohort." />
+    <meta property="og:description" content="A student-run hacker house at WashU, proposed as a Living Learning Community for Fall 2027. Events are open to builders across St. Louis." />
     <meta property="og:image" content="https://disruptio.co/public/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -183,6 +183,7 @@
         margin-bottom: 15px;
         padding-right: 30px;
       }
+      .card-grid.three { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
       .card p:last-child { margin-bottom: 0; }
       .card.thesis::before {
         content: '✦';
@@ -360,17 +361,28 @@
         <!-- Arch mark: same path as public/logo-mark-*.svg; currentColor follows light/dark mode -->
         <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M7 56 C10 20 24 8 32 8 C40 8 54 20 57 56 L48 56 C45.5 27 37.5 13 32 13 C26.5 13 18.5 27 16 56 Z" fill="currentColor"/></svg>
         <h1>Disruptio</h1>
-        <p class="subtitle">A student-run hacker house for people building startups in St. Louis. Space to work, mentors who've done it, and a community that makes building fun.</p>
+        <p class="subtitle">A student-run hacker house at WashU for people building startups. Live with other builders, learn from mentors who've done it, and make building fun.</p>
         <div class="hero-actions">
           <!-- TODO: replace with your interest form URL -->
           <a class="cta-button" href="#join">Join the founding cohort</a>
         </div>
-        <p class="hero-note">Open to WashU students and builders across St. Louis.</p>
+        <p class="hero-note">Proposed as a WashU Living Learning Community for Fall 2027. Hackathons and events are open to builders across St. Louis.</p>
       </header>
 
       <section>
         <h2>What we're building</h2>
-        <p>A physical and cultural space in the heart of St. Louis where builders come together. Disruptio is a <span class="highlight">student-run initiative</span> that helps WashU talent and the broader St. Louis community build ventures locally:</p>
+        <p>Disruptio is a <span class="highlight">student-run initiative</span> with two parts: a house where WashU builders live together, and a community that reaches across campus and into St. Louis.</p>
+        <div class="card-grid">
+          <div class="card">
+            <h4>The house</h4>
+            <p>A Living Learning Community of about 20 WashU students who live together and are building startups, or want to.</p>
+          </div>
+          <div class="card">
+            <h4>The community</h4>
+            <p>Hackathons, retreats, and mentorship open to any WashU student, plus events with founders, investors, and builders across St. Louis.</p>
+          </div>
+        </div>
+        <p>Together, they give builders:</p>
         <ul class="offer-list">
           <li>Mentorship from founders who have built and scaled companies</li>
           <li>Resources and support to go from idea to traction</li>
@@ -381,8 +393,43 @@
       </section>
 
       <section>
+        <h2>The house: a WashU Living Learning Community</h2>
+        <p>WashU has plenty of students building things, but they're scattered across dorms, majors, and class years, and most of them never meet. <span class="highlight">Putting them under one roof changes that.</span> When the people you live with are also building, you find co-founders in the kitchen, get feedback at midnight, and keep going when it gets hard.</p>
+        <p>We're proposing the house as a Living Learning Community through WashU Residential Life, with a faculty sponsor from the Skandalaris Center for Interdisciplinary Innovation and Entrepreneurship. Here's what the house runs:</p>
+        <ul class="offer-list">
+          <li>A build retreat every semester</li>
+          <li>Monthly build nights and programs</li>
+          <li>A campus-wide hackathon every semester, open to all WashU students</li>
+          <li>Mentors and advisors who have built and scaled companies</li>
+        </ul>
+        <p>The house is for WashU students, but its impact reaches the whole campus and the city.</p>
+      </section>
+
+      <section>
+        <h2>What we've done so far</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">Pitched the Skandalaris Center</div>
+            <p>We pitched Disruptio to the Skandalaris Center and its National Council.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Won the Mayfield WashU AI Hackathon</div>
+            <p>We put the full $2,000 prize into the community.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Hosted our first build retreat</div>
+            <p>A weekend of building with mentors and a fireside chat from a WashU founder.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Up next: the first campus-wide hackathon</div>
+            <p>In partnership with the Skandalaris Center.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <h2>Who it's for</h2>
-        <div class="card-grid">
+        <div class="card-grid three">
           <div class="card">
             <h4>You're already building</h4>
             <p>You have a side project, a startup, or a research idea you want to turn into a company, and you want people around you who take it as seriously as you do.</p>
@@ -391,42 +438,44 @@
             <h4>You want to start</h4>
             <p>You haven't built anything yet, but you want to. You'll find teammates, ideas, and people a few steps ahead who will help you get going.</p>
           </div>
+          <div class="card">
+            <h4>You're building in St. Louis</h4>
+            <p>You're at another school or a local startup. The house is for WashU students, but our events and network are open to you.</p>
+          </div>
         </div>
       </section>
 
-      <!-- HOW IT WORKS: update each card as details are confirmed; keep "Still being finalized" until they are -->
+      <!-- HOW IT WORKS: update each card as details are confirmed; keep the "Pending approval" / "Still being finalized" tags until they are -->
       <section>
         <h2>How it works</h2>
+        <p><span class="highlight">The on-campus house for WashU students is the heart of the project and our focus right now.</span> It's the first step toward a broader goal: making St. Louis a place where builders stay and build.</p>
         <p>We're early, and some details aren't settled yet. Here's where things stand.</p>
         <div class="details-grid">
           <div class="detail">
             <h4>When</h4>
-            <p>The founding cohort is planned for Fall 2027. The exact opening date is still being finalized.</p>
+            <p>Move-in is planned for Fall 2027. Hackathons, retreats, and other events start before then.</p>
           </div>
           <div class="detail">
             <h4>Where</h4>
-            <span class="tbd">Still being finalized</span>
-            <p>We're securing a space in St. Louis now. Once it's confirmed, we'll share the location and how to get there, including without a car.</p>
+            <span class="tbd">Pending approval</span>
+            <p>The house is WashU campus housing, through Residential Life. We'll share the specific house once it's approved.</p>
           </div>
           <div class="detail">
             <h4>Format</h4>
-            <span class="tbd">Still being finalized</span>
-            <p>Whether that's live-in, drop-in coworking, or a mix, building alongside other people is the core of it, and events are part of it either way.</p>
+            <p>About 20 WashU students live together as a Living Learning Community, with events open to campus and St. Louis.</p>
           </div>
           <div class="detail">
             <h4>Cost</h4>
             <span class="tbd">Still being finalized</span>
-            <p>We'll share costs before anyone is asked to commit to anything.</p>
+            <p>Housing would go through the regular WashU housing process. We'll share costs before anyone is asked to commit to anything.</p>
           </div>
           <div class="detail">
             <h4>Getting in</h4>
-            <span class="tbd">Still being finalized</span>
-            <p>Signing up is the first step. It puts you on the list for the founding cohort. We'll share how members are selected once that's set.</p>
+            <p>The house is open to continuing WashU students: rising sophomores, juniors, and seniors. Signing up is the first step.</p>
           </div>
           <div class="detail">
             <h4>Commitment</h4>
-            <span class="tbd">Still being finalized</span>
-            <p>Signing up doesn't commit you to anything. We'll be clear about what membership expects before you join.</p>
+            <p>Residents take part in a retreat each semester and monthly programs, and help run a campus hackathon each semester. Signing up commits you to nothing yet.</p>
           </div>
         </div>
       </section>
@@ -445,7 +494,7 @@
 
       <section>
         <h2>Our approach</h2>
-        <p>We can't replicate Silicon Valley overnight, but we can start the flywheel. The ecosystem starts as a bridge between St. Louis and coastal risk capital. Over time, ventures that start and scale here will create capital and density in St. Louis itself.</p>
+        <p>We can't replicate Silicon Valley overnight, but we can start the flywheel, and it <span class="highlight">starts at WashU</span>. The house builds density on campus, and open events connect that talent to St. Louis. The ecosystem starts as a bridge between St. Louis and coastal risk capital. Over time, ventures that start and scale here will create capital and density in St. Louis itself.</p>
         <div class="card-grid">
           <div class="card thesis">
             <h4>Fun is crucial</h4>
@@ -461,14 +510,29 @@
       <!-- UPCOMING EVENTS: add dates and sign-up links once the first hackathon is scheduled -->
       <section>
         <h2>Coming up</h2>
-        <div class="card">
-          <h4>Hackathons · Spring 2027</h4>
-          <p>We're starting to host hackathons in Spring 2027, before the space opens. Sign up to hear about the first one.</p>
+        <div class="card-grid">
+          <div class="card">
+            <h4>Campus hackathon with the Skandalaris Center</h4>
+            <span class="tbd">Date coming soon</span>
+            <p>Our first campus-wide hackathon, open to all WashU students. Sign up to hear when the date is set.</p>
+          </div>
+          <div class="card">
+            <h4>Build retreats</h4>
+            <p>Weekends of focused building with mentors, every semester. Sign up to hear about the next one.</p>
+          </div>
         </div>
       </section>
 
       <section class="faq">
         <h2>FAQ</h2>
+        <details>
+          <summary>What's a Living Learning Community?</summary>
+          <p>A Living Learning Community (LLC) is a group of WashU students who live together in campus housing around a shared interest, with a faculty sponsor and programs through Residential Life. Ours is for students building startups.</p>
+        </details>
+        <details>
+          <summary>Do I have to live in the house to be part of Disruptio?</summary>
+          <p>No. Hackathons, retreats, and mentorship are open to any WashU student, and many of our events are open to builders across St. Louis.</p>
+        </details>
         <details>
           <summary>Do I need an idea?</summary>
           <p>No. Plenty of people find their idea, or their co-founders, by being around other builders. Come curious.</p>
@@ -479,27 +543,27 @@
         </details>
         <details>
           <summary>Are first-years welcome?</summary>
-          <p>Yes. First-years are welcome, and starting early is a big advantage. You don't need experience to join.</p>
+          <p>Yes. First-years can join events now, and starting early is a big advantage. You can apply to live in the house as a rising sophomore.</p>
         </details>
         <details>
           <summary>Is this affiliated with WashU?</summary>
-          <p>Disruptio was started by and is run by WashU students. It isn't an official university program. Any formal relationship with WashU is still being finalized.</p>
+          <p>Disruptio was started by and is run by WashU students. We've proposed the house as a Living Learning Community through Residential Life, with a faculty sponsor from the Skandalaris Center. Approval is in progress.</p>
         </details>
         <details>
           <summary>Can non-WashU students join?</summary>
-          <p>Yes. Disruptio is open to builders across St. Louis, including students at other schools.</p>
+          <p>The house is WashU housing, so living there is for WashU students. Our events are open to builders across St. Louis, including students at other schools.</p>
         </details>
       </section>
 
       <!-- CLOSING CTA -->
       <section class="cta" id="join">
         <h2>Join the Fall 2027 cohort</h2>
-        <p>We're building the first group of members now. Tell us what you're working on, or what you want to work on.</p>
+        <p>We're building the first group of members now. Tell us what you're working on, or what you want to work on, and whether you'd like to live in the house.</p>
         <!-- WHAT HAPPENS NEXT: keep in sync with what you actually send sign-ups -->
         <ol class="next-steps">
           <li>Fill out the short sign-up form.</li>
-          <li>You'll get occasional updates on the space, events, and the founding cohort. No spam.</li>
-          <li>When the space opens, you'll be among the first to hear about it.</li>
+          <li>You'll get occasional updates on the house, events, and the founding cohort. No spam.</li>
+          <li>If you'd like to live in the house, we'll reach out about applying alongside WashU housing.</li>
         </ol>
         <a class="cta-button" href="https://forms.gle/kF9RMzgU3Xef2vdD9" target="_blank" rel="noopener">Sign up</a>
         <p class="share-line">Know someone who should be here? Send them disruptio.co.</p>
