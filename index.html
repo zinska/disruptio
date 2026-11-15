@@ -82,11 +82,19 @@
         padding-bottom: 50px;
         border-bottom: 3px solid var(--text);
       }
+      /* Arch mark sits to the left of the name, sized to the heading text */
+      .brand {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 0.22em;
+      }
       .logo-mark {
-        display: block;
-        width: 64px;
-        height: 64px;
-        margin: 0 auto 16px;
+        flex: none;
+        width: 1em;
+        height: 1em;
+        position: relative;
+        top: 0.125em; /* the arch's feet sit 1/8 above the SVG's bottom edge; drop them onto the baseline */
         color: var(--text);
       }
       h1 {
@@ -359,8 +367,7 @@
       <!-- HERO: who it's for + the ask, above the fold -->
       <header>
         <!-- Arch mark: same path as public/logo-mark-*.svg; currentColor follows light/dark mode -->
-        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M7 56 C10 20 24 8 32 8 C40 8 54 20 57 56 L48 56 C45.5 27 37.5 13 32 13 C26.5 13 18.5 27 16 56 Z" fill="currentColor"/></svg>
-        <h1>Disrupt</h1>
+        <h1 class="brand"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M7 56 C10 20 24 8 32 8 C40 8 54 20 57 56 L48 56 C45.5 27 37.5 13 32 13 C26.5 13 18.5 27 16 56 Z" fill="currentColor"/></svg>Disrupt</h1>
         <p class="subtitle">A student-run hacker house at WashU for people building startups. Live with other builders, learn from mentors who've done it, and make building fun.</p>
         <div class="hero-actions">
           <a class="cta-button" href="#join">Join the founding cohort</a>
