@@ -318,11 +318,68 @@
         margin: 40px 0;
       }
       .placeholder strong { color: var(--text); display: block; font-size: 1.2rem; margin-bottom: 6px; }
+      /* Site menu: same markup on every page; keep in sync across index, thesis, hackathon, network, alumni */
+      .site-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+        margin: -30px 0 50px;
+        padding-bottom: 18px;
+        border-bottom: 2px solid var(--border);
+      }
+      .nav-brand {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.22em;
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+      }
+      .nav-brand .logo-mark { width: 1em; height: 1em; position: relative; top: 0.125em; }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px 22px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--subtle);
+        padding: 4px 0;
+        border-bottom: 2px solid transparent;
+      }
+      .nav-links a:hover { color: var(--text); }
+      .nav-links a[aria-current="page"] { color: var(--text); border-bottom-color: var(--text); }
+      .nav-links .nav-join {
+        color: var(--on-text);
+        background: var(--text);
+        padding: 6px 16px;
+        border: 2px solid var(--text);
+      }
+      .nav-links .nav-join:hover { color: var(--on-text); opacity: 0.85; }
+      @media (max-width: 768px) {
+        .site-nav { margin-top: -20px; justify-content: center; }
+        .nav-links { justify-content: center; gap: 6px 16px; }
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <a class="back-link" href="/">← disruptio.co</a>
+      <nav class="site-nav" aria-label="Main">
+        <a class="nav-brand" href="/"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M7 56 C10 20 24 8 32 8 C40 8 54 20 57 56 L48 56 C45.5 27 37.5 13 32 13 C26.5 13 18.5 27 16 56 Z" fill="currentColor"/></svg>Disrupt</a>
+        <ul class="nav-links">
+          <li><a href="/thesis.html">Thesis</a></li>
+          <li><a href="/hackathon.html">Hackathon</a></li>
+          <li><a href="/network.html" aria-current="page">Network</a></li>
+          <li><a href="/alumni.html">Alumni</a></li>
+          <li><a class="nav-join" href="/#join">Join</a></li>
+        </ul>
+      </nav>
 
       <header>
         <!-- Arch mark: same path as public/logo-mark-*.svg; currentColor follows light/dark mode -->
